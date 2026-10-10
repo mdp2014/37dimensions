@@ -1,5 +1,9 @@
 # 37dimensions · Rochecorbon 🚀
 
+<p align="center">
+  <img src="logo.jpg" alt="Logo Officiel 37dimensions" width="280" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+</p>
+
 > **Micro-makerspace intergénérationnel à Rochecorbon (Indre-et-Loire - 37)**  
 > *Fabriquer. Comprendre. Partager.*
 
@@ -22,6 +26,7 @@ L'association **37dimensions** démocratise l'accès à :
 ---
 
 ## 🎨 Charte Graphique & Identité
+- **Logo officiel** : Le Cube Isométrique Circuit "37" (`logo.jpg`) combinant volume 3D, pistes électroniques et le chiffre 37.
 - **Thème** : Sombre, moderne, "Atelier / Maker / Cyber-Tech doux"
 - **Palette** :
   - Fond : `#0a0c0d` (Anthracite très sombre avec trame technique)
@@ -38,8 +43,7 @@ L'association **37dimensions** démocratise l'accès à :
 ├── index.html            # Landing page monopage sémantique et accessible
 ├── style.css             # Feuille de styles CSS3 moderne (variables, flexbox/grid)
 ├── script.js             # Interactions légères (menu mobile, smooth scroll, validation)
-├── logo-concept-1.jpg    # Concept Logo 01 : Cube Isométrique Circuit
-├── logo-concept-2.jpg    # Concept Logo 02 : Polyèdre Tesseract Makerspace
+├── logo.jpg              # Logo officiel 37dimensions (Cube Isométrique Circuit 37)
 ├── README.md             # Documentation du projet
 └── .gitignore            # Fichiers exclus du versionnement
 ```
