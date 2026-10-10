@@ -774,7 +774,13 @@
             </p>
           </div>
 
-          <form id="contact-form" class="contact-form" novalidate>
+          <form id="contact-form" class="contact-form" action="https://formsubmit.co/marin.depibrac@gmail.com" method="POST" novalidate>
+            <!-- Configuration FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="[37dimensions] Nouveau contact / Inscription">
+            <input type="hidden" name="_next" value="https://mdp2014.github.io/37dimensions/#contact">
+
             <div class="form-row">
               <div class="form-group">
                 <label for="prenom" class="form-label">Prénom <span class="required">*</span></label>
@@ -853,6 +859,20 @@
               <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Dites-nous ce qui vous motive, vos attentes, ou le matériel que vous aimeriez utiliser à l'atelier..."></textarea>
             </div>
 
+            <!-- Alerte d'erreur dynamique -->
+            <div id="form-error" class="form-error-box" hidden>
+              <div class="error-box-header">
+                <span class="error-icon">⚠️</span>
+                <strong>Une erreur est survenue lors de l'envoi direct.</strong>
+              </div>
+              <p class="error-box-desc">
+                Vous pouvez transmettre votre message directement par email à :
+              </p>
+              <a id="mail-fallback-btn" href="mailto:marin.depibrac@gmail.com" class="btn btn-secondary btn-sm">
+                ✉️ Envoyer à marin.depibrac@gmail.com
+              </a>
+            </div>
+
             <!-- Soumission -->
             <div class="form-footer">
               <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
@@ -870,7 +890,7 @@
             <div class="success-icon text-lime">✓</div>
             <h4 class="success-title">Bienvenue dans l'aventure 37dimensions !</h4>
             <p class="success-desc">
-              Votre demande a bien été enregistrée. Nous vous contacterons rapidement avec les détails des prochaines rencontres à Rochecorbon.
+              Votre message a été transmis directement à l'équipe (<strong>marin.depibrac@gmail.com</strong>). Nous vous recontacterons très vite avec les détails des prochaines rencontres à Rochecorbon.
             </p>
             <button type="button" class="btn btn-secondary btn-sm" id="btn-reset-form">
               Envoyer un autre message
@@ -917,7 +937,7 @@
       <div class="footer-col">
         <h4 class="footer-col-title mono">// COMMUNAUTÉ</h4>
         <ul class="footer-links">
-          <li><a href="mailto:contact@37dimensions.fr" class="link-contact">✉️ contact@37dimensions.fr</a></li>
+          <li><a href="mailto:marin.depibrac@gmail.com" class="link-contact">✉️ marin.depibrac@gmail.com</a></li>
           <li><a href="#contact">💬 Rejoindre le groupe de discussion</a></li>
           <li><a href="#infos">📅 Prochaines sessions du samedi</a></li>
           <li><a href="#contact">🤝 Devenir bénévole / Partenaire</a></li>
@@ -960,13 +980,13 @@
       </div>
       <div class="modal-body">
         <h4>Éditeur du site</h4>
-        <p>Association "37dimensions" (en cours de constitution)<br>Siège social : 37210 Rochecorbon, France.<br>Contact : contact@37dimensions.fr</p>
+        <p>Association "37dimensions" (en cours de constitution)<br>Siège social : 37210 Rochecorbon, France.<br>Contact : marin.depibrac@gmail.com</p>
         
         <h4>Objet de l'association</h4>
         <p>L'association "37dimensions" a pour objet de créer un micro-makerspace intergénérationnel favorisant la démocratisation de l'intelligence artificielle, de la fabrication numérique (impression 3D), de l'électronique et de la démarche slow-tech auprès des habitants de Rochecorbon et de la région tourangelle.</p>
 
         <h4>Données Personnelles (RGPD)</h4>
-        <p>Les informations recueillies via le formulaire de contact sont uniquement destinées à l'organisation des activités de l'association. Elles ne font l'objet d'aucune cession commerciale. Conformément à la loi "Informatique et Libertés", vous disposez d'un droit d'accès et de rectification sur simple demande par email à contact@37dimensions.fr.</p>
+        <p>Les informations recueillies via le formulaire de contact sont uniquement destinées à l'organisation des activités de l'association. Elles ne font l'objet d'aucune cession commerciale. Conformément à la loi "Informatique et Libertés", vous disposez d'un droit d'accès et de rectification sur simple demande par email à marin.depibrac@gmail.com.</p>
       </div>
     </div>
   </div>

@@ -86,6 +86,8 @@ function initActiveNavObserver() {
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const successBox = document.getElementById('form-success');
+  const errorBox = document.getElementById('form-error');
+  const mailFallbackBtn = document.getElementById('mail-fallback-btn');
   const resetBtn = document.getElementById('btn-reset-form');
   const submitBtn = document.getElementById('submit-btn');
 
@@ -118,7 +120,7 @@ function initContactForm() {
     });
   });
 
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const prenom = form.querySelector('#prenom');
@@ -140,50 +142,95 @@ function initContactForm() {
       return;
     }
 
+    if (errorBox) errorBox.setAttribute('hidden', '');
+
     // Récupération des cases cochées
     const selectedInterests = Array.from(
       form.querySelectorAll('input[name="interets"]:checked')
     ).map(cb => cb.value);
 
-    const formData = {
-      prenom: prenom.value.trim(),
-      nom: nom.value.trim(),
-      email: email.value.trim(),
-      telephone: form.querySelector('#telephone').value.trim(),
-      profil: profil.value,
-      interets: selectedInterests,
-      message: form.querySelector('#message').value.trim(),
-      date: new Date().toISOString()
+    const profilLabel = profil.options[profil.selectedIndex] ? profil.options[profil.selectedIndex].text : profil.value;
+    const prenomVal = prenom.value.trim();
+    const nomVal = nom.value.trim();
+    const emailVal = email.value.trim();
+    const telVal = form.querySelector('#telephone').value.trim() || 'Non renseigné';
+    const interetsVal = selectedInterests.length > 0 ? selectedInterests.join(', ') : 'Aucun sélectionné';
+    const messageVal = form.querySelector('#message').value.trim() || '(Aucun message)';
+
+    const payload = {
+      prenom: prenomVal,
+      nom: nomVal,
+      email: emailVal,
+      telephone: telVal,
+      profil: profilLabel,
+      interets: interetsVal,
+      message: messageVal,
+      _subject: `[37dimensions] Inscription / Message de ${prenomVal} ${nomVal}`,
+      _replyto: emailVal,
+      _captcha: "false",
+      _template: "table"
     };
 
-    // Simulation de chargement asynchrone
+    // Bouton en état de chargement
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
 
-    setTimeout(() => {
-      // Enregistrement de pré-adhésion dans le localStorage pour persistance locale
-      try {
-        const stored = JSON.parse(localStorage.getItem('37dimensions_inscriptions') || '[]');
-        stored.push(formData);
-        localStorage.setItem('37dimensions_inscriptions', JSON.stringify(stored));
-      } catch (err) {
-        console.warn('LocalStorage non disponible:', err);
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/marin.depibrac@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json();
+
+      if (response.ok && (data.success === 'true' || data.success === true)) {
+        // Sauvegarde de secours en localStorage
+        try {
+          const stored = JSON.parse(localStorage.getItem('37dimensions_inscriptions') || '[]');
+          stored.push({ ...payload, date: new Date().toISOString() });
+          localStorage.setItem('37dimensions_inscriptions', JSON.stringify(stored));
+        } catch (storageErr) {
+          console.warn('LocalStorage non disponible:', storageErr);
+        }
+
+        // Affichage du message de confirmation
+        form.style.display = 'none';
+        successBox.removeAttribute('hidden');
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        throw new Error(data.message || 'Erreur lors de la transmission du message.');
+      }
+    } catch (err) {
+      console.error('Erreur FormSubmit:', err);
+
+      // Préparation du lien mailto de secours
+      if (mailFallbackBtn) {
+        const mailtoSub = encodeURIComponent(`[37dimensions] Inscription de ${prenomVal} ${nomVal}`);
+        const mailtoBody = encodeURIComponent(
+          `Bonjour Marin,\n\nVoici ma demande pour l'association 37dimensions :\n\n- Nom : ${nomVal}\n- Prénom : ${prenomVal}\n- Email : ${emailVal}\n- Téléphone : ${telVal}\n- Profil : ${profilLabel}\n- Centres d'intérêt : ${interetsVal}\n\nMessage :\n${messageVal}\n`
+        );
+        mailFallbackBtn.href = `mailto:marin.depibrac@gmail.com?subject=${mailtoSub}&body=${mailtoBody}`;
       }
 
+      if (errorBox) {
+        errorBox.removeAttribute('hidden');
+        errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    } finally {
       submitBtn.classList.remove('loading');
       submitBtn.disabled = false;
-
-      // Affichage du message de confirmation
-      form.style.display = 'none';
-      successBox.removeAttribute('hidden');
-      successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, 700);
+    }
   });
 
   if (resetBtn) {
     resetBtn.addEventListener('click', () => {
       form.reset();
       form.style.display = 'flex';
+      if (errorBox) errorBox.setAttribute('hidden', '');
       successBox.setAttribute('hidden', '');
       form.querySelector('#prenom').focus();
     });
