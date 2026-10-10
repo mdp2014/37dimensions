@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>37dimensions · Rochecorbon | Micro-Makerspace Intergénérationnel</title>
+  <meta name="description" content="Micro-makerspace intergénérationnel à Rochecorbon par l'association 37dimensions. Démocratisation de l'intelligence artificielle, fabrication numérique, électronique et démarche slow-tech.">
+  <meta name="theme-color" content="#0a0c0d">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="37dimensions · Rochecorbon | Micro-makerspace intergénérationnel">
+  <meta property="og:description" content="Le futur se fabrique ensemble, ici et maintenant ! IA, impression 3D, électronique et slow-tech à Rochecorbon par 37dimensions.">
+  <meta property="og:type" content="website">
+
+  <!-- Polices Google Fonts (avec fallback système) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0c0d'/><path d='M16 4 L28 10.5 L28 23.5 L16 30 L4 23.5 L4 10.5 Z' stroke='%2358e6df' stroke-width='2' fill='none'/><path d='M16 4 L16 17 L28 10.5' stroke='%23c8ff46' stroke-width='2'/><path d='M16 17 L4 10.5' stroke='%23c8ff46' stroke-width='2'/><path d='M16 17 L16 30' stroke='%23ff5aa8' stroke-width='2'/></svg>">
+</head>
+<body>
+  <!-- Lien d'évitement accessibilité -->
+  <a href="#contenu-principal" class="skip-link">Passer directement au contenu</a>
+
+  <!-- En-tête / Barre de navigation -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Accueil 37dimensions Rochecorbon">
+        <span class="brand-badge">
+          <svg class="brand-cube-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2 L21 7 L21 17 L12 22 L3 17 L3 7 Z" stroke="#58e6df"/>
+            <path d="M12 2 L12 12 L21 7" stroke="#c8ff46"/>
+            <path d="M12 12 L3 7" stroke="#c8ff46"/>
+            <path d="M12 12 L12 22" stroke="#ff5aa8"/>
+          </svg>
+          <span class="mono brand-title-text">37DIMENSIONS</span>
+        </span>
+        <span class="brand-sub">· Rochecorbon</span>
+      </a>
+
+      <!-- Navigation Desktop -->
+      <nav class="desktop-nav" aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="#philosophie" class="nav-link">Philosophie</a></li>
+          <li><a href="#activites" class="nav-link">Activités</a></li>
+          <li><a href="#infos" class="nav-link">Infos pratiques</a></li>
+          <li><a href="#logos" class="nav-link">Identité / Logos</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-outline btn-sm">
+          <span>Rejoindre</span>
+          <svg class="icon-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Bouton Menu Mobile (Hamburger) -->
+        <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Ouvrir le menu">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Tiroir Mobile -->
+    <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+      <div class="mobile-nav-inner">
+        <ul class="mobile-nav-links">
+          <li><a href="#philosophie" class="mobile-nav-link">01. Philosophie</a></li>
+          <li><a href="#activites" class="mobile-nav-link">02. Activités</a></li>
+          <li><a href="#infos" class="mobile-nav-link">03. Infos pratiques &amp; Tarifs</a></li>
+          <li><a href="#logos" class="mobile-nav-link">04. Identité &amp; Idées Logos</a></li>
+          <li><a href="#contact" class="mobile-nav-link">05. Contact &amp; Adhésion</a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+          <a href="#contact" class="btn btn-primary btn-block">Rejoindre 37dimensions</a>
+          <p class="mobile-meta mono">Micro-makerspace · Rochecorbon (37)</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenu-principal">
+
+    <!-- 1. Hero Section -->
+    <section class="section hero-section" id="hero">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="hero-grid-pattern"></div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-tag-wrapper">
+            <span class="tag-status">
+              <span class="status-pulse"></span>
+              37dimensions · Association en cours de constitution à Rochecorbon
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            37DIMENSIONS : <br>
+            <span class="text-gradient">Le futur se fabrique ensemble,</span> <br>
+            ici et maintenant&nbsp;!
+          </h1>
+
+          <p class="hero-subtitle">
+            Micro-makerspace intergénérationnel à Rochecorbon.<br class="hidden-mobile">
+            <span class="hero-punchline">Fabriquer. Comprendre. Partager.</span>
+          </p>
+
+          <!-- Badges demandés -->
+          <div class="hero-badges" aria-label="Domaines d'expertise">
+            <span class="badge badge-cyan" title="Intelligence Artificielle">
+              <span class="badge-icon">⚡</span> [IA]
+            </span>
+            <span class="badge badge-lime" title="Impression 3D & Fabrication">
+              <span class="badge-icon">🖨️</span> [IMPRESSION 3D]
+            </span>
+            <span class="badge badge-pink" title="Électronique & IoT">
+              <span class="badge-icon">🔌</span> [ÉLECTRONIQUE]
+            </span>
+            <span class="badge badge-yellow" title="Démarche Low & Slow Tech">
+              <span class="badge-icon">🌱</span> [SLOW-TECH]
+            </span>
+          </div>
+
+          <!-- Boutons CTA -->
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <span>Rejoindre l'association</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#activites" class="btn btn-secondary btn-lg">
+              <span>Découvrir les ateliers</span>
+            </a>
+          </div>
+
+          <!-- Métriques rapides du projet -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number mono text-lime">100%</span>
+              <span class="stat-label">Intergénérationnel</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number mono text-cyan">2 sem.</span>
+              <span class="stat-label">Fréquence des ateliers</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number mono text-pink">37210</span>
+              <span class="stat-label">Rochecorbon (37)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visuel interactif / Illustration Maker Tech doux -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="visual-card">
+            <div class="visual-card-header">
+              <span class="dot-red"></span>
+              <span class="dot-yellow"></span>
+              <span class="dot-green"></span>
+              <span class="visual-title mono">atelier@37dimensions:~</span>
+            </div>
+            <div class="visual-body">
+              <svg class="maker-svg" viewBox="0 0 460 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Traces de circuits -->
+                <path d="M40 80 H 120 L 160 120 H 260 L 300 80 H 420" stroke="rgba(88, 230, 223, 0.25)" stroke-width="2" stroke-dasharray="4 4"/>
+                <path d="M40 300 H 140 L 190 250 H 270 L 320 300 H 420" stroke="rgba(200, 255, 70, 0.25)" stroke-width="2" stroke-dasharray="4 4"/>
+                <path d="M230 40 V 130" stroke="rgba(255, 90, 168, 0.3)" stroke-width="2"/>
+                <path d="M230 250 V 340" stroke="rgba(255, 90, 168, 0.3)" stroke-width="2"/>
+
+                <!-- Noeuds lumineux -->
+                <circle cx="80" cy="80" r="6" fill="#58e6df" class="pulse-node-cyan"/>
+                <circle cx="380" cy="80" r="6" fill="#c8ff46" class="pulse-node-lime"/>
+                <circle cx="80" cy="300" r="6" fill="#ff5aa8" class="pulse-node-pink"/>
+                <circle cx="380" cy="300" r="6" fill="#58e6df" class="pulse-node-cyan"/>
+
+                <!-- Noyau central -->
+                <g class="central-core">
+                  <rect x="140" y="125" width="180" height="130" rx="16" fill="#121617" stroke="#2a3539" stroke-width="2"/>
+                  <rect x="148" y="133" width="164" height="114" rx="10" fill="#0d1011"/>
+                  
+                  <!-- Cube isométrique 37D -->
+                  <g transform="translate(230, 178)">
+                    <path d="M0 -22 L18 -12 L18 10 L0 20 L-18 10 L-18 -12 Z" stroke="#58e6df" stroke-width="1.8" fill="rgba(88, 230, 223, 0.05)"/>
+                    <path d="M0 -22 L0 0 L18 -12" stroke="#c8ff46" stroke-width="1.8"/>
+                    <path d="M0 0 L-18 -12" stroke="#c8ff46" stroke-width="1.8"/>
+                    <path d="M0 0 L0 20" stroke="#ff5aa8" stroke-width="1.8"/>
+                    <text x="0" y="4" text-anchor="middle" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">37D</text>
+                  </g>
+
+                  <!-- Dynamic text -->
+                  <text x="230" y="232" text-anchor="middle" fill="#9aa8ad" font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="1">37DIMENSIONS</text>
+                </g>
+
+                <!-- Badges flottants -->
+                <g class="floating-tag tag-ia" transform="translate(45, 140)">
+                  <rect width="90" height="36" rx="18" fill="#121617" stroke="#58e6df" stroke-width="1.2"/>
+                  <circle cx="18" cy="18" r="4" fill="#58e6df"/>
+                  <text x="32" y="22" fill="#eafcfb" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">IA &amp; Code</text>
+                </g>
+
+                <g class="floating-tag tag-print" transform="translate(320, 130)">
+                  <rect width="105" height="36" rx="18" fill="#121617" stroke="#c8ff46" stroke-width="1.2"/>
+                  <circle cx="18" cy="18" r="4" fill="#c8ff46"/>
+                  <text x="32" y="22" fill="#f4ffdf" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">Print 3D</text>
+                </g>
+
+                <g class="floating-tag tag-slow" transform="translate(180, 280)">
+                  <rect width="100" height="36" rx="18" fill="#121617" stroke="#ff5aa8" stroke-width="1.2"/>
+                  <circle cx="18" cy="18" r="4" fill="#ff5aa8"/>
+                  <text x="32" y="22" fill="#ffeaf4" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">Slow-Tech</text>
+                </g>
+              </svg>
+
+              <div class="visual-terminal-footer mono">
+                <span class="text-lime">$</span> <span class="type-text">37dimensions --start-maker-lab --rochecorbon</span>
+                <span class="cursor-blink">_</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Section Philosophie (Nos Valeurs) -->
+    <section class="section section-dark" id="philosophie">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker mono text-cyan">// 01. NOTRE MANIFESTE</span>
+          <h2 class="section-title">Quatre valeurs pour guider notre atelier</h2>
+          <p class="section-subtitle">
+            Face à l'avalanche technologique et au consumérisme jetable, <strong>37dimensions</strong> fait le choix d'un lieu d'émancipation, de bidouille éthique et de transmission bienveillante.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <!-- 01. COMPRENDRE -->
+          <article class="value-card">
+            <div class="value-card-header">
+              <span class="value-number mono text-cyan">01</span>
+              <div class="value-icon-circle icon-cyan">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12h5l3 7 4-14 3 7h5"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="value-title">COMPRENDRE <span class="value-highlight text-cyan">plutôt que subir</span></h3>
+            <p class="value-desc">
+              Démystifier l'IA, les algorithmes et les objets connectés. Ne laissons pas la technologie devenir une boîte noire magique et opaque. Nous décortiquons son fonctionnement pour en reprendre le contrôle éclairé et critique.
+            </p>
+            <ul class="value-bullets mono">
+              <li>• Comprendre les LLM &amp; modèles génératifs</li>
+              <li>• Esprit critique face aux biais numériques</li>
+              <li>• Souveraineté et respect des données privées</li>
+            </ul>
+          </article>
+
+          <!-- 02. RÉPARER -->
+          <article class="value-card">
+            <div class="value-card-header">
+              <span class="value-number mono text-lime">02</span>
+              <div class="value-icon-circle icon-lime">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="value-title">RÉPARER <span class="value-highlight text-lime">plutôt que jeter</span></h3>
+            <p class="value-desc">
+              Inscrit dans une démarche Slow-Tech durable, notre atelier valorise le tournevis, le multimètre et le fer à souder. Nous redonnons une seconde vie aux objets du quotidien au lieu de céder aux sirènes du tout-jetable.
+            </p>
+            <ul class="value-bullets mono">
+              <li>• Diagnostic et dépannage d'appareils</li>
+              <li>• Impression 3D de pièces détachées introuvables</li>
+              <li>• Sobriété numérique &amp; réemploi de matériel</li>
+            </ul>
+          </article>
+
+          <!-- 03. FABRIQUER -->
+          <article class="value-card">
+            <div class="value-card-header">
+              <span class="value-number mono text-pink">03</span>
+              <div class="value-icon-circle icon-pink">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="value-title">FABRIQUER <span class="value-highlight text-pink">plutôt qu'acheter</span></h3>
+            <p class="value-desc">
+              Passer du statut de simple consommateur passif à celui de créateur outillé. Concevoir ses propres pièces personnalisées, automatiser de petits besoins domestiques, prototyper des solutions concrètes pour soi ou la commune.
+            </p>
+            <ul class="value-bullets mono">
+              <li>• Modélisation 3D assistée par ordinateur</li>
+              <li>• Découpe vinyle, stickers et pochoirs</li>
+              <li>• Électronique interactive &amp; capteurs connectés</li>
+            </ul>
+          </article>
+
+          <!-- 04. PARTAGER -->
+          <article class="value-card">
+            <div class="value-card-header">
+              <span class="value-number mono text-cyan">04</span>
+              <div class="value-icon-circle icon-yellow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="value-title">PARTAGER <span class="value-highlight text-cyan">entre générations</span></h3>
+            <p class="value-desc">
+              Le cœur battant de <strong>37dimensions</strong> : créer un pont chaleureux entre les générations. Les aînés apportent leur méthode et leur savoir-faire ; les plus jeunes partagent leur intuition numérique et leur fraîcheur créative.
+            </p>
+            <ul class="value-bullets mono">
+              <li>• Binômes intergénérationnels sur projets</li>
+              <li>• Ateliers ouverts aux familles et aux seniors</li>
+              <li>• Entraide amicale sans jargon rébarbatif</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Section Activités (2 piliers) -->
+    <section class="section" id="activites">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker mono text-lime">// 02. PROGRAMME &amp; ATELIERS</span>
+          <h2 class="section-title">Deux piliers pour explorer et expérimenter</h2>
+          <p class="section-subtitle">
+            Que vous soyez débutant absolu, bidouilleur aguerri ou parent souhaitant éveiller la curiosité de son enfant, nos ateliers chez <strong>37dimensions</strong> sont conçus pour être concrets, stimulants et gratifiants.
+          </p>
+        </div>
+
+        <div class="activities-grid">
+          <!-- Carte ADULTES -->
+          <article class="activity-card activity-adults">
+            <div class="activity-banner">
+              <div class="activity-badge-top mono">
+                <span>PÔLE 01</span> · TOUS PUBLICS &amp; ADULTES
+              </div>
+              <h3 class="activity-heading">Makers, Curieux &amp; Praticiens</h3>
+              <p class="activity-intro">
+                Apprivoiser les nouvelles frontières numériques tout en gardant les pieds sur terre et les mains dans le cambouis.
+              </p>
+            </div>
+
+            <div class="activity-content">
+              <div class="workshop-list">
+
+                <div class="workshop-item">
+                  <div class="workshop-icon-box text-cyan">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="3"></circle>
+                      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                  </div>
+                  <div class="workshop-details">
+                    <h4 class="workshop-title">Initiation IA Générative</h4>
+                    <p class="workshop-text">
+                      Prendre en main ChatGPT, Claude, Midjourney &amp; outils open-source locaux. Maîtriser le prompt engineering utile au quotidien, créer des textes, visuels et assister ses projets.
+                    </p>
+                    <div class="workshop-tags mono">
+                      <span>#ChatGPT</span> <span>#Midjourney</span> <span>#Prompting</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="workshop-item">
+                  <div class="workshop-icon-box text-lime">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                  </div>
+                  <div class="workshop-details">
+                    <h4 class="workshop-title">Modélisation 3D &amp; Découpe Vinyle</h4>
+                    <p class="workshop-text">
+                      Apprentissage de Fusion 360 &amp; Tinkercad : concevoir des volumes à la bonne cote, trancher ses fichiers (slicing) et imprimer en dépôt de fil (FDM). Découpe vinyle pour lettrages et pochoirs.
+                    </p>
+                    <div class="workshop-tags mono">
+                      <span>#Fusion360</span> <span>#Slicer</span> <span>#Impression3D</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="workshop-item">
+                  <div class="workshop-icon-box text-pink">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                      <rect x="9" y="9" width="6" height="6"></rect>
+                      <line x1="9" y1="1" x2="9" y2="4"></line>
+                      <line x1="15" y1="1" x2="15" y2="4"></line>
+                      <line x1="9" y1="20" x2="9" y2="23"></line>
+                      <line x1="15" y1="20" x2="15" y2="23"></line>
+                      <line x1="20" y1="9" x2="23" y2="9"></line>
+                      <line x1="20" y1="14" x2="23" y2="14"></line>
+                      <line x1="1" y1="9" x2="4" y2="9"></line>
+                      <line x1="1" y1="14" x2="4" y2="14"></line>
+                    </svg>
+                  </div>
+                  <div class="workshop-details">
+                    <h4 class="workshop-title">Électronique &amp; Objets Connectés (IoT)</h4>
+                    <p class="workshop-text">
+                      Arduino, ESP32 et Raspberry Pi : câblage de capteurs (température, humidité, présence), pilotage de relais, micro-programmation et domotique respectueuse des données.
+                    </p>
+                    <div class="workshop-tags mono">
+                      <span>#Arduino</span> <span>#RaspberryPi</span> <span>#Capteurs</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="workshop-item">
+                  <div class="workshop-icon-box text-cyan">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="2" width="20" height="20" rx="3"></rect>
+                      <path d="M12 8v8"></path>
+                      <path d="M8 12h8"></path>
+                    </svg>
+                  </div>
+                  <div class="workshop-details">
+                    <h4 class="workshop-title">Atelier "Boîte Noire" &amp; Rétro-ingénierie</h4>
+                    <p class="workshop-text">
+                      Ouvrir un objet défaillant ou un gadget connecté, analyser ses circuits, diagnostiquer la panne, comprendre pourquoi il a cessé de fonctionner et étudier comment le réparer ou le détourner.
+                    </p>
+                    <div class="workshop-tags mono">
+                      <span>#Teardown</span> <span>#Diagnostic</span> <span>#SlowTech</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="activity-footer">
+              <a href="#contact" class="btn btn-outline btn-block">Participer aux ateliers adultes</a>
+            </div>
+          </article>
+
+          <!-- Carte JEUNES -->
+          <article class="activity-card activity-juniors">
+            <div class="activity-banner">
+              <div class="activity-badge-top mono text-pink">
+                <span>PÔLE 02</span> · 8 À 17 ANS
+              </div>
+              <h3 class="activity-heading">Fablab Junior : Bâtisseurs en herbe</h3>
+              <p class="activity-intro">
+                Apprendre à créer plutôt que consommer des écrans : logique, créativité manuelle et émerveillement technique.
+              </p>
+            </div>
+
+            <div class="activity-content">
+              <div class="workshop-list">
+
+                <div class="workshop-item">
+                  <div class="workshop-icon-box text-pink">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                  </div>
+                  <div class="workshop-details">
+                    <h4 class="workshop-title">Coding Club (Python &amp; Scratch)</h4>
+                    <p class="workshop-text">
+                      Découverte ludique de la programmation. Des blocs visuels de Scratch aux premiers scripts Python pour créer de petits jeux vidéo 2D, des animations et comprendre la logique algorithmique.
+                    </p>
+                    <div class="workshop-tags mono">
+                      <span>#Scratch</span> <span>#PythonJunior</span> <span>#GameDev</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="workshop-item">
+                  <div class="workshop-icon-box text-lime">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                      <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                      <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                    </svg>
+                  </div>
+                  <div class="workshop-details">
+                    <h4 class="workshop-title">Robotique d'Éveil &amp; Mécatronique</h4>
+                    <p class="workshop-text">
+                      Montage et programmation de petits robots roulants autonomes : capteurs à ultrasons pour éviter les murs, suivi de ligne au sol et défis de labyrinthes en équipe.
+                    </p>
+                    <div class="workshop-tags mono">
+                      <span>#Robots</span> <span>#Ultrasons</span> <span>#Équipes</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="workshop-item">
+                  <div class="workshop-icon-box text-cyan">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="6" cy="6" r="3"></circle>
+                      <circle cx="18" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <circle cx="18" cy="18" r="3"></circle>
+                      <line x1="9" y1="6" x2="15" y2="6"></line>
+                      <line x1="6" y1="9" x2="6" y2="15"></line>
+                      <line x1="18" y1="9" x2="18" y2="15"></line>
+                      <line x1="9" y1="18" x2="15" y2="18"></line>
+                      <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                  </div>
+                  <div class="workshop-details">
+                    <h4 class="workshop-title">Drones &amp; Aéromodélisme</h4>
+                    <p class="workshop-text">
+                      Sensibilisation aux principes du vol, mécanique des hélices, télémétrie et pilotage de mini-drones en toute sécurité. Règles de l'espace aérien et respect des consignes.
+                    </p>
+                    <div class="workshop-tags mono">
+                      <span>#Drones</span> <span>#Aérodynamique</span> <span>#Sécurité</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="workshop-item">
+                  <div class="workshop-icon-box text-yellow">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                      <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                    </svg>
+                  </div>
+                  <div class="workshop-details">
+                    <h4 class="workshop-title">Stop-motion &amp; LEGO Motorisés</h4>
+                    <p class="workshop-text">
+                      Création de court-métrages d'animation image par image (briques LEGO, pâte à modeler) combinés à des mécanismes motorisés et des décors créés avec nos machines.
+                    </p>
+                    <div class="workshop-tags mono">
+                      <span>#StopMotion</span> <span>#LEGOTech</span> <span>#Créativité</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="activity-footer">
+              <a href="#contact" class="btn btn-outline btn-block">Inscrire un jeune au Fablab Junior</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Section Infos Pratiques / Tarifs -->
+    <section class="section section-dark" id="infos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker mono text-pink">// 03. ORGANISATION &amp; MODALITÉS</span>
+          <h2 class="section-title">Infos pratiques &amp; Tarifs accessibles</h2>
+          <p class="section-subtitle">
+            Un modèle associatif de proximité, fondé sur la convivialité, l'accessibilité financière et la mise en commun des ressources.
+          </p>
+        </div>
+
+        <div class="practical-grid">
+          <!-- Carte Rythme -->
+          <div class="info-card">
+            <div class="info-card-icon text-cyan">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div class="info-card-content">
+              <span class="info-badge mono text-cyan">CALENDRIER</span>
+              <h3 class="info-title">1 séance toutes les 2 semaines</h3>
+              <p class="info-desc">
+                Des rendez-vous réguliers le <strong>samedi</strong> (créneaux matin pour les jeunes, après-midi pour les adultes &amp; projets libres). Un calendrier semestriel sera partagé avec les adhérents.
+              </p>
+              <div class="info-tag-list mono">
+                <span>✓ Samedi matin : Junior</span>
+                <span>✓ Samedi aprèm : Adultes &amp; Open Lab</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte Tarif -->
+          <div class="info-card highlight-border">
+            <div class="info-card-icon text-lime">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
+                <line x1="12" y1="6" x2="12" y2="8"></line>
+                <line x1="12" y1="16" x2="12" y2="18"></line>
+              </svg>
+            </div>
+            <div class="info-card-content">
+              <span class="info-badge mono text-lime">COTISATION ANNUELLE</span>
+              <h3 class="info-title">
+                <span class="price-val text-lime">30 € à 45 €</span> <span class="price-period">/ an</span>
+              </h3>
+              <p class="info-desc">
+                Adhésion annuelle solidaire pour toute l'année scolaire. Tarif réduit (30 €) pour étudiants, demandeurs d'emploi et juniors. Adhésion standard / soutien (45 €).
+              </p>
+              <div class="info-tag-list mono">
+                <span>✓ Accès aux machines partagées</span>
+                <span>✓ Formations &amp; entraide incluses</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carte Lieu -->
+          <div class="info-card">
+            <div class="info-card-icon text-pink">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="info-card-content">
+              <span class="info-badge mono text-pink">LOCALISATION</span>
+              <h3 class="info-title">Rochecorbon (37210)</h3>
+              <p class="info-desc">
+                Implanté en plein cœur de Rochecorbon, en bord de Loire (Indre-et-Loire - 37). Accès facile depuis Tours métropole, stationnement gratuit et bus Fil Bleu à proximité.
+              </p>
+              <div class="info-tag-list mono">
+                <span>✓ Touraine / Bords de Loire</span>
+                <span>✓ Salle chauffée &amp; équipée</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ce qui est inclus dans le tiers-lieu -->
+        <div class="included-box">
+          <div class="included-header">
+            <h4 class="included-title">Ce que vous trouverez à l'atelier lors de chaque séance :</h4>
+          </div>
+          <div class="included-items">
+            <div class="inc-item">
+              <span class="inc-check">✓</span>
+              <span>Parc d'imprimantes 3D réglées et filaments de base</span>
+            </div>
+            <div class="inc-item">
+              <span class="inc-check">✓</span>
+              <span>Postes de soudure, multimètres et outillage d'électronique</span>
+            </div>
+            <div class="inc-item">
+              <span class="inc-check">✓</span>
+              <span>Découpeuse vinyle pour adhésifs et flocage</span>
+            </div>
+            <div class="inc-item">
+              <span class="inc-check">✓</span>
+              <span>Accès partagé aux outils d'IA et ressources documentaires</span>
+            </div>
+            <div class="inc-item">
+              <span class="inc-check">✓</span>
+              <span>Accompagnement par des passionnés pédagogues</span>
+            </div>
+            <div class="inc-item">
+              <span class="inc-check">✓</span>
+              <span>La pause thé / café et les échanges conviviaux !</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION BONUS : Idées de Logo & Identité Visuelle 37dimensions -->
+    <section class="section" id="logos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker mono text-cyan">// 04. IDENTITÉ GRAPHIQUE</span>
+          <h2 class="section-title">Concepts de Logo pour "37dimensions"</h2>
+          <p class="section-subtitle">
+            Pourquoi ce nom ? Le chiffre <strong>37</strong> ancre le projet en Indre-et-Loire (Touraine / Rochecorbon), tandis que <strong>dimensions</strong> évoque la 3D, le multivers des technologies et la richesse intergénérationnelle. Voici deux propositions graphiques concrètes générées pour votre identité :
+          </p>
+        </div>
+
+        <div class="logos-grid">
+          <!-- Concept 1 -->
+          <article class="logo-card">
+            <div class="logo-preview-box">
+              <img src="logo-concept-1.jpg" alt="Concept Logo 1 : Cube Isométrique Circuit 37dimensions" class="logo-img" loading="lazy">
+            </div>
+            <div class="logo-card-body">
+              <span class="logo-badge mono text-lime">CONCEPT 01 · CUBE HYBRIDE CIRCUIT</span>
+              <h3 class="logo-concept-title">Le Cube Isométrique Maker</h3>
+              <p class="logo-concept-desc">
+                Un cube en projection isométrique évoquant le volume 3D et la fabrication numérique. Les pistes électroniques néon cyan et vert lime s'entrelacent pour dessiner subtilement les chiffres <strong>3</strong> et <strong>7</strong>. Idéal pour stickers, broderie et t-shirts d'atelier.
+              </p>
+              <div class="logo-tags mono">
+                <span>#Cube3D</span> <span>#Circuits</span> <span>#Chiffre37</span> <span>#CyberTech</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Concept 2 -->
+          <article class="logo-card">
+            <div class="logo-preview-box">
+              <img src="logo-concept-2.jpg" alt="Concept Logo 2 : Polyèdre Laser Tesseract 37dimensions" class="logo-img" loading="lazy">
+            </div>
+            <div class="logo-card-body">
+              <span class="logo-badge mono text-cyan">CONCEPT 02 · POLYÈDRE TESSERACT</span>
+              <h3 class="logo-concept-title">Le Polyèdre aux 37 Dimensions</h3>
+              <p class="logo-concept-desc">
+                Un tesseract géométrique multifacettes lumineux rappelant le maillage filaire (wireframe) des logiciels de CAO 3D (Fusion 360, Blender) et le laser de découpe. Le <strong>37</strong> trône fièrement au cœur du noyau lumineux.
+              </p>
+              <div class="logo-tags mono">
+                <span>#Polyedre</span> <span>#Wireframe</span> <span>#Makerspace</span> <span>#Futuriste</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Section Contact & Appel au Noyau Fondateur -->
+    <section class="section section-contact section-dark" id="contact">
+      <div class="container">
+        
+        <!-- Bloc Appel au Noyau Fondateur -->
+        <div class="callout-founder">
+          <div class="founder-badge mono text-lime">// APPEL AU NOYAU FONDATEUR</div>
+          <h2 class="founder-title">
+            Bâtissons 37dimensions ensemble dès aujourd'hui !
+          </h2>
+          <p class="founder-lead">
+            L'association <strong>37dimensions</strong> est en phase de préfiguration active à Rochecorbon. Nous recherchons nos membres fondateurs et nos premiers explorateurs pour co-définir les projets, les équipements et le rythme des ateliers.
+          </p>
+          <div class="founder-profiles-grid">
+            <div class="profile-pill">
+              <span class="profile-emoji">👴👵</span>
+              <div>
+                <strong>Retraités &amp; Bricoleurs</strong>
+                <p>Pour partager un savoir-faire manuel ou s'initier aux technos avec bienveillance.</p>
+              </div>
+            </div>
+            <div class="profile-pill">
+              <span class="profile-emoji">🧒🎒</span>
+              <div>
+                <strong>Jeunes &amp; Ados</strong>
+                <p>Envie de coder, de piloter des robots et de créer des objets uniques de vos mains.</p>
+              </div>
+            </div>
+            <div class="profile-pill">
+              <span class="profile-emoji">🛠️💻</span>
+              <div>
+                <strong>Passionnés &amp; Makers</strong>
+                <p>Développeurs, concepteurs 3D ou électroniciennes souhaitant animer des ateliers.</p>
+              </div>
+            </div>
+            <div class="profile-pill">
+              <span class="profile-emoji">🌱🔍</span>
+              <div>
+                <strong>Curieux &amp; Citoyens</strong>
+                <p>Simplement curieux de comprendre l'IA sans prérequis, ou adeptes de la réparation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire de contact / Inscription -->
+        <div class="contact-box">
+          <div class="contact-box-header">
+            <h3 class="contact-form-title">Rejoindre 37dimensions ou poser une question</h3>
+            <p class="contact-form-subtitle">
+              Remplissez ce formulaire court pour être informé du calendrier, participer à la réunion fondatrice ou réserver votre place.
+            </p>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom" class="form-label">Prénom <span class="required">*</span></label>
+                <input type="text" id="prenom" name="prenom" class="form-input" placeholder="Ex: Camille" required>
+                <span class="error-msg" id="error-prenom">Veuillez renseigner votre prénom</span>
+              </div>
+              <div class="form-group">
+                <label for="nom" class="form-label">Nom <span class="required">*</span></label>
+                <input type="text" id="nom" name="nom" class="form-input" placeholder="Ex: Dupont" required>
+                <span class="error-msg" id="error-nom">Veuillez renseigner votre nom</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email" class="form-label">Adresse email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="camille@exemple.fr" required>
+                <span class="error-msg" id="error-email">Veuillez renseigner une adresse email valide</span>
+              </div>
+              <div class="form-group">
+                <label for="telephone" class="form-label">Téléphone <span class="optional">(optionnel)</span></label>
+                <input type="tel" id="telephone" name="telephone" class="form-input" placeholder="06 12 34 56 78">
+              </div>
+            </div>
+
+            <!-- Choix du profil -->
+            <div class="form-group">
+              <label for="profil" class="form-label">Votre profil principal <span class="required">*</span></label>
+              <select id="profil" name="profil" class="form-select" required>
+                <option value="" disabled selected>Sélectionnez votre profil...</option>
+                <option value="adulte-curieux">Adulte curieux / Débutant (apprendre l'IA, le 3D, le code)</option>
+                <option value="retraite-senior">Retraité / Senior (transmettre, bricoler, comprendre l'IA)</option>
+                <option value="parent-ado">Parent d'un jeune (pour le Fablab Junior 8-17 ans)</option>
+                <option value="jeune-ado">Jeune ou ado passionné (coding, robotique, stop-motion)</option>
+                <option value="maker-animateur">Maker / Animateur potentiel (envie de co-animer et aider)</option>
+                <option value="autre">Autre démarche / Curieux citoyen</option>
+              </select>
+              <span class="error-msg" id="error-profil">Veuillez choisir un profil</span>
+            </div>
+
+            <!-- Intérêts (cases à cocher stylisées) -->
+            <div class="form-group">
+              <label class="form-label">Sujets qui vous intéressent le plus :</label>
+              <div class="interests-grid">
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="interets" value="IA" checked>
+                  <span class="checkbox-visual"></span>
+                  <span class="mono">Intelligence Artificielle</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="interets" value="Impression 3D" checked>
+                  <span class="checkbox-visual"></span>
+                  <span class="mono">Impression 3D &amp; Vinyle</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="interets" value="Electronique">
+                  <span class="checkbox-visual"></span>
+                  <span class="mono">Électronique &amp; Arduino</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="interets" value="SlowTech">
+                  <span class="checkbox-visual"></span>
+                  <span class="mono">Slow-Tech &amp; Réparation</span>
+                </label>
+                <label class="checkbox-pill">
+                  <input type="checkbox" name="interets" value="FablabJunior">
+                  <span class="checkbox-visual"></span>
+                  <span class="mono">Fablab Junior</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Message libre -->
+            <div class="form-group">
+              <label for="message" class="form-label">Votre message, projets ou idées <span class="optional">(optionnel)</span></label>
+              <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Dites-nous ce qui vous motive, vos attentes, ou le matériel que vous aimeriez utiliser à l'atelier..."></textarea>
+            </div>
+
+            <!-- Soumission -->
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary btn-lg" id="submit-btn">
+                <span class="btn-text">Envoyer mon message / Rejoindre 37dimensions</span>
+                <span class="btn-loader"></span>
+              </button>
+              <p class="privacy-note mono">
+                🔒 Vos coordonnées restent strictement confidentielles et ne seront utilisées que pour l'association 37dimensions.
+              </p>
+            </div>
+          </form>
+
+          <!-- Boîte de succès après soumission -->
+          <div id="form-success" class="form-success-box" hidden>
+            <div class="success-icon text-lime">✓</div>
+            <h4 class="success-title">Bienvenue dans l'aventure 37dimensions !</h4>
+            <p class="success-desc">
+              Votre demande a bien été enregistrée. Nous vous contacterons rapidement avec les détails des prochaines rencontres à Rochecorbon.
+            </p>
+            <button type="button" class="btn btn-secondary btn-sm" id="btn-reset-form">
+              Envoyer un autre message
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 6. Pied de page (Footer) -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="brand-badge">
+            <svg class="brand-cube-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2 L21 7 L21 17 L12 22 L3 17 L3 7 Z" stroke="#58e6df"/>
+              <path d="M12 2 L12 12 L21 7" stroke="#c8ff46"/>
+              <path d="M12 12 L3 7" stroke="#c8ff46"/>
+              <path d="M12 12 L12 22" stroke="#ff5aa8"/>
+            </svg>
+            <span class="mono brand-title-text">37DIMENSIONS</span>
+          </span>
+          <span class="brand-sub">· Rochecorbon</span>
+        </a>
+        <p class="footer-about">
+          Micro-makerspace intergénérationnel en Touraine. Un espace d'apprentissage libre pour explorer toutes les dimensions du numérique, réparer le matériel et fabriquer l'avenir ensemble.
+        </p>
+        <div class="footer-location mono">
+          📍 Rochecorbon (37210) · Indre-et-Loire (37)
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title mono">// NAVIGATION</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Accueil</a></li>
+          <li><a href="#philosophie">Philosophie (4 piliers)</a></li>
+          <li><a href="#activites">Activités Adultes &amp; Jeunes</a></li>
+          <li><a href="#infos">Infos pratiques &amp; Tarifs</a></li>
+          <li><a href="#logos">Identité &amp; Idées Logos</a></li>
+          <li><a href="#contact">Rejoindre 37dimensions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title mono">// COMMUNAUTÉ</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:contact@37dimensions.fr" class="link-contact">✉️ contact@37dimensions.fr</a></li>
+          <li><a href="#contact">💬 Rejoindre le groupe de discussion</a></li>
+          <li><a href="#infos">📅 Prochaines sessions du samedi</a></li>
+          <li><a href="#contact">🤝 Devenir bénévole / Partenaire</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title mono">// VALEURS</h4>
+        <div class="footer-tags mono">
+          <span class="footer-chip">#37dimensions</span>
+          <span class="footer-chip">#TouraineMaker</span>
+          <span class="footer-chip">#SlowTech</span>
+          <span class="footer-chip">#OpenSource</span>
+          <span class="footer-chip">#Rochecorbon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="copyright mono">
+          © 2026 37dimensions Rochecorbon · Association loi 1901 en constitution.
+        </p>
+        <div class="footer-bottom-links mono">
+          <a href="#mentions" id="open-mentions">Mentions légales</a>
+          <span>·</span>
+          <span>Fait avec passion en Touraine (37)</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Mentions Légales Simplifiées -->
+  <div id="modal-mentions" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title mono">// Mentions Légales &amp; RGPD</h3>
+        <button type="button" class="modal-close" id="modal-close" aria-label="Fermer la boîte de dialogue">✕</button>
+      </div>
+      <div class="modal-body">
+        <h4>Éditeur du site</h4>
+        <p>Association "37dimensions" (en cours de constitution)<br>Siège social : 37210 Rochecorbon, France.<br>Contact : contact@37dimensions.fr</p>
+        
+        <h4>Objet de l'association</h4>
+        <p>L'association "37dimensions" a pour objet de créer un micro-makerspace intergénérationnel favorisant la démocratisation de l'intelligence artificielle, de la fabrication numérique (impression 3D), de l'électronique et de la démarche slow-tech auprès des habitants de Rochecorbon et de la région tourangelle.</p>
+
+        <h4>Données Personnelles (RGPD)</h4>
+        <p>Les informations recueillies via le formulaire de contact sont uniquement destinées à l'organisation des activités de l'association. Elles ne font l'objet d'aucune cession commerciale. Conformément à la loi "Informatique et Libertés", vous disposez d'un droit d'accès et de rectification sur simple demande par email à contact@37dimensions.fr.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bouton Retour en haut -->
+  <button id="back-to-top" class="back-to-top" aria-label="Retourner en haut de page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
