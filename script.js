@@ -142,7 +142,15 @@ function initContactForm() {
       return;
     }
 
-    if (errorBox) errorBox.setAttribute('hidden', '');
+    // Réinitialisation de l'affichage des alertes
+    if (errorBox) {
+      errorBox.setAttribute('hidden', '');
+      errorBox.style.display = 'none';
+    }
+    if (successBox) {
+      successBox.setAttribute('hidden', '');
+      successBox.style.display = 'none';
+    }
 
     // Récupération des cases cochées
     const selectedInterests = Array.from(
@@ -175,6 +183,32 @@ function initContactForm() {
     submitBtn.classList.add('loading');
     submitBtn.disabled = true;
 
+    // Sauvegarde locale de sécurité
+    try {
+      const stored = JSON.parse(localStorage.getItem('37dimensions_inscriptions') || '[]');
+      stored.push({ ...payload, date: new Date().toISOString() });
+      localStorage.setItem('37dimensions_inscriptions', JSON.stringify(stored));
+    } catch (storageErr) {
+      console.warn('LocalStorage non disponible:', storageErr);
+    }
+
+    // Si ouvert en fichier local (file://), FormSubmit bloque l'AJAX : on simule le succès proprement pour l'aperçu local
+    if (window.location.protocol === 'file:') {
+      setTimeout(() => {
+        submitBtn.classList.remove('loading');
+        submitBtn.disabled = false;
+        form.style.display = 'none';
+        if (errorBox) {
+          errorBox.setAttribute('hidden', '');
+          errorBox.style.display = 'none';
+        }
+        successBox.removeAttribute('hidden');
+        successBox.style.display = 'flex';
+        successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 500);
+      return;
+    }
+
     try {
       const response = await fetch('https://formsubmit.co/ajax/marin.depibrac@gmail.com', {
         method: 'POST',
@@ -188,18 +222,14 @@ function initContactForm() {
       const data = await response.json();
 
       if (response.ok && (data.success === 'true' || data.success === true)) {
-        // Sauvegarde de secours en localStorage
-        try {
-          const stored = JSON.parse(localStorage.getItem('37dimensions_inscriptions') || '[]');
-          stored.push({ ...payload, date: new Date().toISOString() });
-          localStorage.setItem('37dimensions_inscriptions', JSON.stringify(stored));
-        } catch (storageErr) {
-          console.warn('LocalStorage non disponible:', storageErr);
-        }
-
-        // Affichage du message de confirmation
+        // Affichage du message de confirmation uniquement
         form.style.display = 'none';
+        if (errorBox) {
+          errorBox.setAttribute('hidden', '');
+          errorBox.style.display = 'none';
+        }
         successBox.removeAttribute('hidden');
+        successBox.style.display = 'flex';
         successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         throw new Error(data.message || 'Erreur lors de la transmission du message.');
@@ -216,8 +246,13 @@ function initContactForm() {
         mailFallbackBtn.href = `mailto:marin.depibrac@gmail.com?subject=${mailtoSub}&body=${mailtoBody}`;
       }
 
+      if (successBox) {
+        successBox.setAttribute('hidden', '');
+        successBox.style.display = 'none';
+      }
       if (errorBox) {
         errorBox.removeAttribute('hidden');
+        errorBox.style.display = 'flex';
         errorBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     } finally {
@@ -230,8 +265,14 @@ function initContactForm() {
     resetBtn.addEventListener('click', () => {
       form.reset();
       form.style.display = 'flex';
-      if (errorBox) errorBox.setAttribute('hidden', '');
-      successBox.setAttribute('hidden', '');
+      if (errorBox) {
+        errorBox.setAttribute('hidden', '');
+        errorBox.style.display = 'none';
+      }
+      if (successBox) {
+        successBox.setAttribute('hidden', '');
+        successBox.style.display = 'none';
+      }
       form.querySelector('#prenom').focus();
     });
   }

@@ -1484,6 +1484,14 @@ button, input, select, textarea {
   text-align: center;
 }
 
+/* Respect absolu de l'attribut hidden */
+[hidden],
+.form-success-box[hidden],
+.form-error-box[hidden],
+.modal[hidden] {
+  display: none !important;
+}
+
 /* Boîte de Succès */
 .form-success-box {
   text-align: center;
@@ -1493,6 +1501,10 @@ button, input, select, textarea {
   align-items: center;
   gap: 16px;
   animation: fade-in 0.4s ease;
+}
+
+.form-success-box[hidden] {
+  display: none !important;
 }
 
 @keyframes fade-in {
@@ -1536,6 +1548,10 @@ button, input, select, textarea {
   flex-direction: column;
   gap: 10px;
   animation: fade-in 0.3s ease;
+}
+
+.form-error-box[hidden] {
+  display: none !important;
 }
 
 .error-box-header {
